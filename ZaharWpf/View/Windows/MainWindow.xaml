@@ -1,0 +1,51 @@
+﻿<Window x:Class="ZaharWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZaharWpf"
+        mc:Ignorable="d"
+        Title="MainWindow" WindowStartupLocation="CenterScreen" Height="815" Width="375" WindowStyle="None" AllowsTransparency="True" Background="Transparent" ResizeMode="NoResize">
+    <Grid>
+        <Border CornerRadius="10">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#2c3e50" Offset="0.0"/>
+                    <GradientStop Color="#34495e" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="70" />
+            </Grid.RowDefinitions>
+            <Frame x:Name="MainFrm" Margin="0 10" NavigationUIVisibility="Hidden" />
+            <Grid Grid.Row="1">
+                <StackPanel Margin="5" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Width="100" Name="ResheniaBtn" Click="ResheniaBtn_Click" Height="50">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Image Source="\Resources\Iconss\free-icon-smart-solution-12199676.png" Stretch="Uniform"/>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <Button Width="100" Name="LearningBtn" Click="LearningBtn_Click" Height="50">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Image Source="\Resources\Iconss\free-icon-book-828370.png" Stretch="Uniform"/>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <Button  Width="100" Name="ProfilBtn" Click="ProfilBtn_Click" Height="50">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Image Source="\Resources\Iconss\free-icon-user-456283.png" Stretch="Uniform"/>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,40 @@
+﻿<Page x:Class="ZaharWpf.View.Pages.ChaptersPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ZaharWpf.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="710" d:DesignWidth="375"
+      Title="ChaptersPage" Background="White">
+    <!-- Цвет фона страницы -->
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Заголовок страницы -->
+        <TextBlock Text="Описание главы" FontSize="24" FontWeight="Bold" Margin="10" Foreground="#2c3e50"/>
+        <!-- Размер шрифта, жирный стиль и цвет текста -->
+
+        <!-- Контейнер для информации о главе -->
+        <ScrollViewer Grid.Row="1" Margin="10" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden">
+            <StackPanel>
+                <!-- Название главы -->
+                <TextBlock x:Name="ChapterTitle" TextWrapping="Wrap" FontSize="18" FontWeight="Bold" Margin="0,0,0,10" Foreground="#2c3e50"/>
+                <!-- Перенос текста и цвет текста -->
+
+                <!-- Текст главы -->
+                <TextBlock x:Name="ChapterText" TextWrapping="Wrap" Margin="0,0,0,10" Foreground="#2c3e50"/>
+                <!-- Перенос текста и цвет текста -->
+            </StackPanel>
+        </ScrollViewer>
+
+        <!-- Кнопка "Назад" -->
+        <Button Content="Назад" Click="BackBtn_Click"  Name="BackBtn"  Grid.Row="2" HorizontalAlignment="Center" Margin="0,10,0,10" Width="131" Background="#3498db" Foreground="White" FontWeight="Bold" BorderBrush="#2c3e50" BorderThickness="2" Padding="5"/>
+        <!-- Размер кнопки, цвет фона, цвет текста, стиль шрифта, цвет границ и толщина границ -->
+    </Grid>
+</Page>

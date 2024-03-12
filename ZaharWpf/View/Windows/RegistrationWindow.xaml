@@ -1,0 +1,96 @@
+﻿<Window x:Class="ZaharWpf.View.Windows.RegistrationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZaharWpf.View.Windows"
+        mc:Ignorable="d"
+        Title="RegistrationWindow"  WindowStartupLocation="CenterScreen" Height="815" Width="375" WindowStyle="None" AllowsTransparency="True" Background="Transparent" ResizeMode="NoResize">
+
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Margin" Value="10,5"/>
+        </Style>
+        <Style TargetType="TextBox" BasedOn="{StaticResource {x:Type TextBox}}">
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Margin" Value="10,0,10,5"/>
+            <Setter Property="Width" Value="340"/>
+        </Style>
+        <Style TargetType="PasswordBox">
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Margin" Value="10,0,10,5"/>
+            <Setter Property="Width" Value="340"/>
+        </Style>
+        <Style TargetType="ComboBox" BasedOn="{StaticResource {x:Type ComboBox}}">
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Margin" Value="10,0,10,5"/>
+            <Setter Property="Width" Value="340"/>
+        </Style>
+        <Style TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+            <Setter Property="Width" Value="160"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Margin" Value="20"/>
+            <Setter Property="Background" Value="#3498db"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Border CornerRadius="10">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#2c3e50" Offset="0.0"/>
+                    <GradientStop Color="#34495e" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="180" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="AUTO" />
+                <RowDefinition Height="AUTO" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="AUTO" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="100" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="1" 
+                       Text="Регистрация"
+                       FontWeight="ExtraBold"
+                       FontSize="30"
+                       HorizontalAlignment="Center"/>
+
+            <TextBlock Text="Email:" Grid.Row="6"/>
+            <TextBox Name="EmailTb" Grid.Row="7"/>
+
+            <TextBlock Text="Пароль:" Grid.Row="8"/>
+            <PasswordBox Name="PasswordPb" Grid.Row="9"/>
+
+            <TextBlock Text="Язык программирования:" Grid.Row="10"/>
+            <ComboBox Name="ProgrammingLanguageCmb" Grid.Row="11"/>
+
+            <TextBlock Text="Ссылка на фото:" Grid.Row="12"/>
+            <TextBox Name="PhotoUrlTb" Grid.Row="13"/>
+
+            <Button Name="RegistretionBtn" Grid.Row="14" Click="RegistretionBtn_Click" Content="Зарегистрироваться"/>
+            <Button Grid.Row="15" Content="Назад" Click="Button_Click" Margin="0,6,0,34" Grid.RowSpan="2"/>
+        </Grid>
+    </Grid>
+</Window>
