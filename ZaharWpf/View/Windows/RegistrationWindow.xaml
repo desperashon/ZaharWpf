@@ -77,16 +77,16 @@
                        FontSize="30"
                        HorizontalAlignment="Center"/>
 
-            <TextBlock Text="Email:" Grid.Row="6"/>
+            <TextBlock Text="Email:" FontSize="13" Grid.Row="6" Margin="18,5,17,5"/>
             <TextBox Name="EmailTb" Grid.Row="7"/>
 
-            <TextBlock Text="Пароль:" Grid.Row="8"/>
+            <TextBlock FontSize="13" Text="Пароль:" Grid.Row="8" Margin="18,5,17,5"/>
             <PasswordBox Name="PasswordPb" Grid.Row="9"/>
 
-            <TextBlock Text="Язык программирования:" Grid.Row="10"/>
+            <TextBlock FontSize="13" Text="Язык программирования:" Grid.Row="10" Margin="18,5,17,5"/>
             <ComboBox Name="ProgrammingLanguageCmb" Grid.Row="11"/>
 
-            <TextBlock Text="Ссылка на фото:" Grid.Row="12"/>
+            <TextBlock FontSize="13" Text="Ссылка на фото:" Grid.Row="12" Margin="18,5,17,5"/>
             <TextBox Name="PhotoUrlTb" Grid.Row="13"/>
 
             <Button Name="RegistretionBtn" Grid.Row="14" Click="RegistretionBtn_Click" Content="Зарегистрироваться"/>

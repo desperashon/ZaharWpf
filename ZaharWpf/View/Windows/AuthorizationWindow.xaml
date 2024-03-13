@@ -43,16 +43,18 @@
                 Foreground="White"/>
 
             <TextBlock Text="Email:"
-                Grid.Row="3"
+                Grid.Row="2"
                 FontWeight="Bold"
-                Margin="10 0"
-                Foreground="White"/>
+                Margin="18,79,17,38"
+                       FontSize="13"
+                Foreground="White" Grid.RowSpan="3"/>
 
             <TextBlock Text="Пароль:"
-                Grid.Row="5"
+                Grid.Row="4"
                 FontWeight="Bold"
-                Margin="10 0"
-                Foreground="White"/>
+                Margin="18,43,17,50"
+                       FontSize="13"
+                Foreground="White" Grid.RowSpan="4"/>
 
             <Button Name="AuthorizationBtn"
              Click="AuthorizationBtn_Click"
