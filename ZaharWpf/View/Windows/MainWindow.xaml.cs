@@ -24,7 +24,7 @@ namespace ZaharWpf
         public MainWindow(Users enteredUser)
         {
             InitializeComponent();
-            this.enteredUser = enteredUser; // Присваиваем значение переменной enteredUser
+            this.enteredUser = enteredUser; 
             MainFrm.Navigate(new SmartSolutionsPage());
         }
 
@@ -36,9 +36,9 @@ namespace ZaharWpf
 
         private void LearningBtn_Click(object sender, RoutedEventArgs e)
         {
-            // Создаем объект LearningPage и передаем в конструктор значение enteredUser
+           
             LearningPage learningPage = new LearningPage(enteredUser);
-            // Переходим на страницу LearningPage
+        
             MainFrm.NavigationService.Navigate(learningPage);
         }
 

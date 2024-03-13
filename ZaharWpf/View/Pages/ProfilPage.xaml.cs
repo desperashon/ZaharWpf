@@ -34,12 +34,11 @@ namespace ZaharWpf.View.Pages
 
         private void FillProgrammingLanguagesComboBox()
         {
-            // Заполнение ComboBox значениями языков программирования
+            
             ProgrammingLanguageComboBox.DisplayMemberPath = "Name";
             ProgrammingLanguageComboBox.SelectedValuePath = "LanguageID";
             ProgrammingLanguageComboBox.ItemsSource = App.context.ProgrammingLanguages.ToList();
 
-            // Установка выбранного языка программирования текущего пользователя
             if (currentUser != null && currentUser.LanguageID != null)
             {
                 int selectedLanguageID = currentUser.LanguageID.Value;
@@ -60,9 +59,9 @@ namespace ZaharWpf.View.Pages
             {
                 try
                 {
-                    // Создаем новый объект изображения и устанавливаем источник из ссылки на фото
+                    
                     BitmapImage bitmap = new BitmapImage(new Uri(currentUser.Photo));
-                    UserPhoto.Source = bitmap; // Заменяем "Photo" на "UserPhoto"
+                    UserPhoto.Source = bitmap; 
                 }
                 catch (Exception ex)
                 {
@@ -76,12 +75,12 @@ namespace ZaharWpf.View.Pages
         {
             if (currentUser != null)
             {
-                // Находим текущего пользователя в базе данных
+  
                 Users existingUser = App.context.Users.FirstOrDefault(u => u.UserID == currentUser.UserID);
 
                 if (existingUser != null)
                 {
-                    // Обновляем данные текущего пользователя
+                    
                     existingUser.Email = EmailTextBox.Text;
                     existingUser.Password = PasswordBox.Password;
                     if (ProgrammingLanguageComboBox.SelectedItem != null)
@@ -89,7 +88,7 @@ namespace ZaharWpf.View.Pages
                         existingUser.LanguageID = (ProgrammingLanguageComboBox.SelectedItem as ProgrammingLanguages).LanguageID;
                     }
 
-                    // Сохраняем изменения в базе данных
+              
                     App.context.SaveChanges();
 
                     MessageBox.Show("Изменения сохранены успешно.");

@@ -7,37 +7,36 @@
       mc:Ignorable="d" 
       d:DesignHeight="710" d:DesignWidth="375"
       Title="LearningPage" Background="Transparent">
-    <!-- Устанавливаем черный цвет фона -->
+    
 
     <Grid>
-        <!-- Верхняя панель с названием языка программирования -->
+    
         <Border Background="#2c3e50" Height="50" VerticalAlignment="Top">
-            <!-- Цвет фона и высота верхней панели -->
+          
             <TextBlock Name="TitleTb"
                        Foreground="White" FontSize="18"
                        VerticalAlignment="Center" HorizontalAlignment="Center"/>
-            <!-- Цвет текста и размер шрифта -->
+
         </Border>
 
-        <!-- Панель с книгами -->
+      
         <ListBox Background="#34495e" ItemsSource="{Binding Chapters}" Width="330" Height="550" Margin="10,70,10,10" SelectionMode="Single"
                  ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden">
-            <!-- Цвет фона и размеры панели -->
+          
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Border BorderBrush="#BDC3C7" BorderThickness="1" Margin="5,0,0,5" Background="#ECF0F1">
-                        <!-- Цвет границ и фона глав -->
+                      
                         <StackPanel>
                             <StackPanel Orientation="Horizontal" Width="310">
                                 <TextBlock Text="{Binding ChapterNumber}" FontWeight="Bold" FontSize="16" Margin="10,0,10,0" HorizontalAlignment="Center"/>
-                                <!-- Размер и стиль шрифта для номера главы -->
-                                <!-- Заголовок главы -->
+                             
                                 <TextBlock Text="{Binding Title}" FontWeight="Bold" FontSize="16" Margin="10,0,10,0" HorizontalAlignment="Center"/>
-                                <!-- Размер и стиль шрифта для заголовка главы -->
+                                
                             </StackPanel>
-                            <!-- Кнопка для открытия главы -->
+
                             <Button Content="Открыть главу" Click="GlavaBtn_Click" Margin="10"/>
-                            <!-- Устанавливаем отступы для кнопки -->
+                            
                         </StackPanel>
                     </Border>
                 </DataTemplate>

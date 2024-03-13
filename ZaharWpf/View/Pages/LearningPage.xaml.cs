@@ -30,17 +30,17 @@ namespace ZaharWpf.View.Pages
             {
                 var currentUserLanguageID = enteredUser.LanguageID;
 
-                // Получаем язык программирования, выбранный пользователем
+             
                 ProgrammingLanguages selectedLanguage = dbContext.ProgrammingLanguages.FirstOrDefault(lang => lang.LanguageID == currentUserLanguageID);
 
                 if (selectedLanguage != null)
                 {
-                    // Получаем книгу на выбранном языке
+      
                     Books book = dbContext.Books.FirstOrDefault(b => b.LanguageID == selectedLanguage.LanguageID);
 
                     if (book != null)
                     {
-                        // Получаем список глав книги из базы данных
+    
                         learningPageData.Chapters = dbContext.Chapters.Where(c => c.BookID == book.BookID).ToList();
                     }
                     else

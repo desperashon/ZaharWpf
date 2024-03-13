@@ -15,20 +15,20 @@ namespace ZaharWpf.View.Pages
         {
             InitializeComponent();
 
-            // Устанавливаем свойства элементов управления на основе переданного объекта Solutions
+           
             if (_solutions != null)
             {
-                // Установка изображения
+               
                 if (!string.IsNullOrEmpty(_solutions.Image))
                 {
                     var bitmapImage = new BitmapImage(new Uri(_solutions.Image, UriKind.RelativeOrAbsolute));
                     solutionImage.Source = bitmapImage;
                 }
 
-                // Установка заголовка
+              
                 solutionTitle.Text = _solutions.Title;
 
-                // Установка описания
+ 
                 solutionDescription.Text = _solutions.Description;
             }
         }

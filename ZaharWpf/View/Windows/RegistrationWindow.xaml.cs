@@ -12,7 +12,7 @@ namespace ZaharWpf.View.Windows
         public RegistrationWindow()
         {
             InitializeComponent();
-            InitializeProgrammingLanguages(); // Инициализация списка языков программирования
+            InitializeProgrammingLanguages();
         }
 
         private void InitializeProgrammingLanguages()
@@ -32,7 +32,6 @@ namespace ZaharWpf.View.Windows
         {
             string errorMessage = "";
 
-            // Проверка на пустые поля
             if (string.IsNullOrWhiteSpace(EmailTb.Text))
             {
                 errorMessage += "Введите email\n";
@@ -62,7 +61,7 @@ namespace ZaharWpf.View.Windows
                 return;
             }
 
-            // Проверка на уникальность email
+          
             using (var context = new zahartextEntities())
             {
                 var existingUser = context.Users.FirstOrDefault(u => u.Email == EmailTb.Text);
@@ -73,7 +72,6 @@ namespace ZaharWpf.View.Windows
                 }
             }
 
-            // Создание объекта пользователя
             Users user = new Users()
             {
                 Email = EmailTb.Text,
@@ -82,7 +80,7 @@ namespace ZaharWpf.View.Windows
                 Photo = PhotoUrlTb.Text,
             };
 
-            // Добавление пользователя в базу данных
+       
             App.context.Users.Add(user);
             App.enteredUser = user;
             App.context.SaveChanges();
@@ -93,7 +91,7 @@ namespace ZaharWpf.View.Windows
             authorizationWindow.Show();
         }
 
-        // Проверка валидности email
+
         private bool IsValidEmail(string email)
         {
             try
@@ -107,10 +105,10 @@ namespace ZaharWpf.View.Windows
             }
         }
 
-        // Проверка на сложность пароля
+
         private bool IsStrongPassword(string password)
         {
-            // Пароль должен содержать не менее 8 символов, включая заглавные и строчные буквы, цифры и специальные символы
+         
             return Regex.IsMatch(password, @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$");
         }
 
@@ -119,7 +117,7 @@ namespace ZaharWpf.View.Windows
         private void Button_Click(object sender, RoutedEventArgs e)
         {
            AuthorizationWindow authorizationWindow = new AuthorizationWindow();
-            this.Close(); // Закрытие текущего окна
+            this.Close();
             authorizationWindow.Show();
         }
     }

@@ -26,7 +26,7 @@ namespace ZaharWpf.View.Pages
             {
                 ChapterTitle.Text = _chapter.Title;
 
-                // Получаем текст главы из соответствующей таблицы по ChapterID
+               
                 using (var context = new zahartextEntities())
                 {
                     var chapterText = context.ChapterTexts.FirstOrDefault(ct => ct.ChapterID == _chapter.ChapterID);

@@ -25,32 +25,31 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <!-- Заголовок страницы -->
+      
         <TextBlock Text="Профиль" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
 
-        <!-- Почта -->
+  
         <TextBlock Grid.Row="1" Text="Почта" FontWeight="Bold"/>
         <TextBox x:Name="EmailTextBox" Grid.Row="2" Width="200" Margin="0,5" BorderBrush="Black" BorderThickness="1" Padding="5"/>
 
-        <!-- Пароль -->
+     
         <TextBlock Text="Пароль" FontWeight="Bold" Grid.Row="3" Margin="0,10,0,0"/>
         <PasswordBox x:Name="PasswordBox" Grid.Row="4" Width="200" Margin="0,5" BorderBrush="Black" BorderThickness="1" Padding="5"/>
 
-        <!-- Язык программирования -->
+   
         <TextBlock Text="Язык программирования" FontWeight="Bold" Grid.Row="5" Margin="0,10,0,0"/>
         <ComboBox x:Name="ProgrammingLanguageComboBox" Grid.Row="6" Width="200" Margin="0,5" BorderBrush="Black" BorderThickness="1" Padding="5">
-            <!-- Ваши элементы списка -->
+     
         </ComboBox>
 
-        <!-- Фото -->
+      
         <Border Grid.Row="7" BorderBrush="Black" BorderThickness="1" Width="200" Height="200" Margin="0,20,0,0">
             <Image Name="UserPhoto"/>
         </Border>
 
-        <!-- Кнопка "Сохранить изменения" -->
         <Button Content="Сохранить изменения" Click="SaveChangesButton_Click"  Name="SaveChangesButton" Grid.Row="8" Width="150" HorizontalAlignment="Center" Margin="0,20,0,0" Background="#3498db" Foreground="White" FontWeight="Bold" BorderBrush="Black" BorderThickness="1" Padding="5"/>
 
-        <!-- Добавленная строка для размещения фото и кнопки -->
+       
         
     </Grid>
 </Page>

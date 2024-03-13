@@ -29,25 +29,25 @@ namespace ZaharWpf.View.Pages
 
         private void SearchTb_TextChanged(object sender, TextChangedEventArgs e)
         {
-            string searchText = SearchTb.Text.ToLower(); // Получаем текст из текстового поля и преобразуем в нижний регистр для регистронезависимого поиска
+            string searchText = SearchTb.Text.ToLower(); 
 
-            // Фильтруем коллекцию решений на основе введенного текста
+           
             var filteredSolutions = App.context.Solutions.Where(solution => solution.Title.ToLower().Contains(searchText)).ToList();
 
-            // Обновляем источник данных для ListBox
+         
             basketLb.ItemsSource = filteredSolutions;
         }
 
 
         private void basketLb_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            // Получаем выбранный элемент из списка
+           
             var selectedSolution = (sender as ListBox).SelectedItem as Solutions;
 
-            // Проверяем, что элемент не является null
+            
             if (selectedSolution != null)
             {
-                // Переходим на страницу DescriptionSmartSolutionsPage и передаем выбранный элемент
+                
                 NavigationService?.Navigate(new DescriptionSmartSolutionsPage(selectedSolution));
             }
         }
