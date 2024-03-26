@@ -27,7 +27,7 @@
            
 
    
-                <TextBlock x:Name="ChapterText" TextWrapping="Wrap" Margin="0,0,0,10" Foreground="#2c3e50"/>
+                <TextBlock x:Name="ChapterText" TextWrapping="Wrap" Margin="0,0,0,10" Foreground="#2c3e50" Height="543" Width="338"/>
  
             </StackPanel>
         </ScrollViewer>

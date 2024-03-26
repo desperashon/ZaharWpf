@@ -31,9 +31,9 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
-            <!-- Фото в кружочке -->
+        
             <Border  Grid.Row="2" BorderBrush="Black" BorderThickness="3" Height="100" CornerRadius="50" Margin="121,10,110,10">
-                <Image Name="UserPhoto" Margin="21,14,15,16"/>
+                <Image Name="UserPhoto" Stretch="Fill" Margin="21,14,15,16"/>
             </Border>
 
             <TextBlock Text="Профиль" FontSize="24" FontWeight="Bold" Margin="0,20,0,20" Grid.Row="1" HorizontalAlignment="Center"/>

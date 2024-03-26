@@ -33,14 +33,14 @@
           <Key>
             <PropertyRef Name="LanguageID" />
           </Key>
-          <Property Name="LanguageID" Type="int" Nullable="false" />
+          <Property Name="LanguageID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="Solutions">
           <Key>
             <PropertyRef Name="SolutionID" />
           </Key>
-          <Property Name="SolutionID" Type="int" Nullable="false" />
+          <Property Name="SolutionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Title" Type="nvarchar" MaxLength="255" />
           <Property Name="Image" Type="nvarchar" MaxLength="255" />
           <Property Name="Description" Type="text" />
@@ -60,7 +60,7 @@
           <Key>
             <PropertyRef Name="UserID" />
           </Key>
-          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Email" Type="nvarchar" MaxLength="255" />
           <Property Name="Password" Type="nvarchar" MaxLength="255" />
           <Property Name="LanguageID" Type="int" />
